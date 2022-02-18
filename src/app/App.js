@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Intro from "../components/intro/intro";
+import {Intro} from "../components/intro/Intro";
 
 const App = () => {
   return (
