@@ -54,7 +54,8 @@
   margin-top: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
 .labelImage {
@@ -75,5 +76,4 @@
 }
 
 .labelDescription {
-
 }

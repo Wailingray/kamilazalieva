@@ -1,0 +1,19 @@
+.galleryItem {
+  width: 30%;
+  height: 40vh;
+  margin: 1.5rem 1rem;
+  border: 2px solid grey;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+
+.headingContainer {
+  height: 2rem;
+  background-color:var(--complementary-1);
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+
+}
