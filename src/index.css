@@ -13,7 +13,8 @@ code {
 }
 
 :root {
-  --main-1: #d71868;
+  --main-1: #006363;
   --contrast-1: #006957;
-  --complementary-1: skyblue;
+  --complementary-1: #33cccc;
+  --backing: #ffb273;
 }
