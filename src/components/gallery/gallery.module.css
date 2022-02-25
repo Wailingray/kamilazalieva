@@ -42,8 +42,21 @@
   gap: 2rem;
 }
 
-.comment {
+.commentContainer {
+  align-self: flex-start;
   width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.commentTitle {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.comment {
+  margin-top: 1rem;
   font-weight: 300;
   text-align: left;
 }

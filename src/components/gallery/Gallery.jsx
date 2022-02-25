@@ -38,20 +38,26 @@ export const Gallery = () => {
             <GalleryItem src={photoPath} />
           </motion.div>
         </motion.div>
-        <p className={styles.comment}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, sed
-          similique eum ad veritatis consequatur aliquam nulla officiis
-          accusamus, odit modi atque delectus maxime. Eum incidunt rerum dolorum
-          voluptatibus culpa!
-        </p>
+        <div className={styles.commentContainer}>
+          <h3 className={styles.commentTitle}>Концерты</h3>
+          <p className={styles.comment}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            sed similique eum ad veritatis consequatur aliquam nulla officiis
+            accusamus, odit modi atque delectus maxime. Eum incidunt rerum
+            dolorum voluptatibus culpa!
+          </p>
+        </div>
       </div>
       <div className={styles.section}>
-        <p className={styles.comment}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, sed
-          similique eum ad veritatis consequatur aliquam nulla officiis
-          accusamus, odit modi atque delectus maxime. Eum incidunt rerum dolorum
-          voluptatibus culpa!
-        </p>
+        <div className={styles.commentContainer}>
+          <h3 className={styles.commentTitle}>Ученики</h3>
+          <p className={styles.comment}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            sed similique eum ad veritatis consequatur aliquam nulla officiis
+            accusamus, odit modi atque delectus maxime. Eum incidunt rerum
+            dolorum voluptatibus culpa!
+          </p>
+        </div>
         <motion.div ref={carousel} className={styles.carousel}>
           <motion.div
             drag="x"
@@ -90,12 +96,15 @@ export const Gallery = () => {
             <GalleryItem src={photoPath} />
           </motion.div>
         </motion.div>
-        <p className={styles.comment}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, sed
-          similique eum ad veritatis consequatur aliquam nulla officiis
-          accusamus, odit modi atque delectus maxime. Eum incidunt rerum dolorum
-          voluptatibus culpa!
-        </p>
+        <div className={styles.commentContainer}>
+          <h3 className={styles.commentTitle}>Награды</h3>
+          <p className={styles.comment}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            sed similique eum ad veritatis consequatur aliquam nulla officiis
+            accusamus, odit modi atque delectus maxime. Eum incidunt rerum
+            dolorum voluptatibus culpa!
+          </p>
+        </div>
       </div>
     </section>
   );
