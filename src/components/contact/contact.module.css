@@ -1,0 +1,58 @@
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.background {
+  width: 1.5rem;
+  height: 100%;
+  background-color: var(--complementary-1);
+  position: absolute;
+}
+
+.wrapper {
+  padding: 3rem;
+  display: flex;
+}
+
+.contacts {
+  flex: 1;
+}
+
+.form {
+  flex: 1;
+}
+
+.title {
+
+}
+
+.info {
+
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+}
+
+.itemImage {
+  width: 4rem;
+}
+
+.itemText {
+
+}
+
+.linkContainer {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.link {
+  transition: .5s linear;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
