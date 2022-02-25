@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+*{
+  box-sizing: border-box;
+}
+
 :root {
   --heavy-1: #118585;
   --complementary-2: #87e6e6;

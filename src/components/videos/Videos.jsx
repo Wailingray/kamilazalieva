@@ -4,8 +4,9 @@ import YouTube from "react-youtube";
 
 export const Videos = () => {
   const opts = {
+    height: "100%",
+    width: "100%",
     playerVars: {
-      // https://developers.google.com/youtube/player_parameters
       autoplay: 0,
     },
   };
