@@ -54,6 +54,12 @@ export const Videos = () => {
           <YouTube videoId="EHI6YoEMu_I" opts={opts} />
         </div>
       </div>
+      <a
+        className={styles.link}
+        href="https://www.youtube.com/channel/UCmEhKMMTZCTu_cmSS2gKK2Q"
+      >
+        Больше видео тут!
+      </a>
     </section>
   );
 };

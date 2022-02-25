@@ -2,8 +2,7 @@
   box-sizing: border-box;
   padding: 3rem;
   position: relative;
-  width: 100%;
-  height: calc(100vh);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,14 +12,16 @@
 .title {
   font-weight: 600;
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  color: white;
 }
 
 .section {
   width: 80%;
+  height: 80%;
   display: grid;
-  grid-template-columns: repeat(2, minmax(20rem, 35rem));
-  grid-template-rows: repeat(2, minmax(10rem, 19rem));
+  grid-template-columns: repeat(2, minmax(20rem, 60rem));
+  grid-template-rows: repeat(2, 1fr);
   column-gap: 5rem;
   row-gap: 3rem;
   justify-items: center;
@@ -81,4 +82,19 @@
 
 .shapeBottom path {
   fill: #ffffff;
+}
+
+.link {
+  margin-right: 10%;
+  align-self: flex-end;
+  margin-top: 4rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1.5rem;
+  transition: .3s linear;
+}
+
+.link:hover {
+  color: var(--backing);
 }
