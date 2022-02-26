@@ -55,6 +55,7 @@ export const Videos = () => {
         </div>
       </div>
       <a
+        target="_blank"
         className={styles.link}
         href="https://www.youtube.com/channel/UCmEhKMMTZCTu_cmSS2gKK2Q"
       >

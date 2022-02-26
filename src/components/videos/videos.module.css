@@ -20,7 +20,7 @@
   width: 80%;
   height: 80%;
   display: grid;
-  grid-template-columns: repeat(2, minmax(20rem, 60rem));
+  grid-template-columns: repeat(2, minmax(20rem, 49.5rem));
   grid-template-rows: repeat(2, 1fr);
   column-gap: 5rem;
   row-gap: 3rem;

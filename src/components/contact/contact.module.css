@@ -1,12 +1,12 @@
 .container {
   position: relative;
-  height: 100vh;
 }
 
 .background {
+  top: -7%;
   width: 1.5rem;
-  height: 100%;
-  background-color: var(--complementary-1);
+  height: 107%;
+  background-color: var(--heavy-1);
   position: absolute;
 }
 
@@ -18,7 +18,19 @@
 }
 
 .contacts {
+  width: 70%;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactsWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .formContainer {
@@ -33,7 +45,7 @@
 .info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .infoItem {
@@ -57,20 +69,22 @@
 }
 
 .link {
-  transition: 0.5s linear;
+  transition: 0.2s linear;
 }
 
-.link:hover {
+.link:hover,
+.link:focus {
   opacity: 0.7;
+  transform: translateY(-0.4em);
 }
 
 .description {
-
+  width: 75%;
 }
 
 .heading {
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .accent {
@@ -78,26 +92,64 @@
 }
 
 .form {
+  max-width: 70%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
 .input {
-  width: 50%;
+  font-size: 1.5rem;
+  padding: 0.5rem 0 0 0.5rem;
+  width: 70%;
   height: 4rem;
   border: none;
-  border-bottom: 1px solid black;
-  font-size: 1rem;
+  border-bottom: 1px solid var(--heavy-1);
+  transition: 0.2s linear;
 }
 
-textarea {
+.input:focus {
+  box-shadow: 0 0 10px 5px var(--heavy-1);
+  outline: none;
+}
+
+.input::placeholder {
+  font-size: 1.5rem;
+  color: var(--heavy-1);
+}
+
+.textarea::placeholder {
+  color: var(--heavy-1);
+  font-size: 1.5rem;
+}
+
+.textarea {
+  font-size: 1.5rem;
+  margin-top: 3.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0 0 0.5rem;
   width: 100%;
-  font-size: 1rem;
+  border: 1px solid var(--heavy-1);
+  resize: none;
+  transition: 0.2s linear;
 }
 
-button {
+.textarea:focus {
+  box-shadow: 0 0 10px 5px var(--heavy-1);
+  outline: none;
+}
+
+.submitContainer {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.button {
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
   border: none;
   padding: 1rem;
   align-self: flex-start;
@@ -105,4 +157,17 @@ button {
   background-color: var(--complementary-1);
   font-weight: 500;
   cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--complementary-1);
+  transform: translateY(-0.4em);
+}
+
+.comment {
+  width: 35%;
+  font-size: 1rem;
+  font-weight: 100;
 }
