@@ -16,7 +16,6 @@ const Modal = ({ children, onClose }) => {
     },
     exit: {
       opacity: 0,
-      transition: { duration: 0.3 },
     },
   };
 

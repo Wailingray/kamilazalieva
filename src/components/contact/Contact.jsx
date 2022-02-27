@@ -8,11 +8,22 @@ import errorPath from "../../images/icons/error.svg";
 import vkPath from "../../images/icons/vk.svg";
 import youTubePath from "../../images/icons/youtube.svg";
 import emailjs from "@emailjs/browser";
+import { fieldSchema, validateInput } from "../../utils/utils";
 
 export const Contact = () => {
   const formRef = useRef();
   const [done, setDone] = useState(false);
   const [error, setError] = useState(false);
+
+  const [name, setName] = useState("");
+  const [nameError, setNameError] = useState(false);
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState(false);
+  const [subject, setSubject] = useState("");
+  const [subjectError, setSubjectError] = useState(false);
+  const [message, setMessage] = useState("");
+  const [messageError, setMessageError] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
@@ -32,6 +43,18 @@ export const Contact = () => {
           console.log(error.text);
         }
       );
+  };
+
+  const changeNameField = (e) => {
+    setName(e.target.value);
+    validateInput(fieldSchema, setNameError, name);
+    console.log(nameError)
+  };
+
+  const changeSubjectField = (e) => {
+    setSubject(e.target.value);
+    validateInput(fieldSchema, setNameError, name);
+    console.log(nameError)
   };
 
   return (
@@ -102,22 +125,27 @@ export const Contact = () => {
             onSubmit={(e) => handleSubmit(e)}
           >
             <input
+              style={nameError ? {borderBottom: '1px solid red'} : null}
               className={styles.input}
               type="text"
               placeholder="Имя"
               name="name"
+              value={name}
+              onChange={(e) => changeNameField(e)}
             />
             <input
               className={styles.input}
               type="text"
               placeholder="Ваш вопрос"
               name="subject"
+              onChange={(e) => setSubject(e.target.value)}
             />
             <input
               className={styles.input}
               type="text"
               placeholder="Email"
               name="email"
+              onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
               className={styles.textarea}
