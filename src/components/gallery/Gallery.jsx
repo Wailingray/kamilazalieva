@@ -6,13 +6,32 @@ import { GalleryItem } from "../galleryItem/GalleryItem";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
+
 export const Gallery = () => {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
 
+  const images = [
+    {
+      src: photoPath,
+    },
+    {
+      src: photoPath,
+    },
+    {
+      src: photoPath,
+    },
+    {
+      src: photoPath,
+    },
+    {
+      src: photoPath,
+    },
+  ];
+
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, width);
+  }, [width]);
 
   return (
     <section className={styles.gallery}>
@@ -29,13 +48,13 @@ export const Gallery = () => {
             }}
             className={styles.innerCarousel}
           >
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
+            {images.map((el, idx) => {
+              return (
+                <li key={idx} className={styles.list}>
+                  <GalleryItem src={el.src} />
+                </li>
+              );
+            })}
           </motion.div>
         </motion.div>
         <div className={styles.commentContainer}>
@@ -67,13 +86,13 @@ export const Gallery = () => {
             }}
             className={styles.innerCarousel}
           >
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
+            {images.map((el, idx) => {
+              return (
+                <li key={idx} className={styles.list}>
+                  <GalleryItem src={el.src} />
+                </li>
+              );
+            })}
           </motion.div>
         </motion.div>
       </div>
@@ -87,13 +106,13 @@ export const Gallery = () => {
             }}
             className={styles.innerCarousel}
           >
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
-            <GalleryItem src={photoPath} />
+            {images.map((el, idx) => {
+              return (
+                <li key={idx} className={styles.list}>
+                  <GalleryItem src={el.src} />
+                </li>
+              );
+            })}
           </motion.div>
         </motion.div>
         <div className={styles.commentContainer}>
