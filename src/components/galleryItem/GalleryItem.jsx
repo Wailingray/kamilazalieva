@@ -1,6 +1,6 @@
 import styles from "./galleryItem.module.css";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Modal from "../modal/modal";
 import eyePath from "../../images/icons/eye.svg";
 
@@ -25,11 +25,17 @@ export const GalleryItem = (props) => {
           alt="фото"
         />
       </motion.div>
-      {isShown && (
-        <Modal onClose={() => setIsShown(false)}>
-          <img src={props.src} alt="" />
-        </Modal>
-      )}
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {isShown && (
+          <Modal onClose={() => setIsShown(false)}>
+            <img src={props.src} alt="" />
+          </Modal>
+        )}{" "}
+      </AnimatePresence>
     </>
   );
 };
