@@ -5,11 +5,34 @@
   border-radius: 1rem;
   overflow: hidden;
   cursor: grab;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  overflow: hidden;
+}
+
+.iconContainer {
+  margin-left: 80%;
+  margin-bottom: -22%;
+  width: 4rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.icon {
+  width: 100%;
+  opacity: 0.8;
+  transition: .2s linear;
+}
+
+.icon:hover {
+  opacity: 1;
+  transform: translateY(-0.4em);
 }
 
