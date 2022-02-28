@@ -7,3 +7,4 @@ export const validateInput = async (schema, setterFunction, stateValue) => {
   const isValid = await schema.isValid(stateValue);
   isValid ? setterFunction(false) : setterFunction(true);
 };
+

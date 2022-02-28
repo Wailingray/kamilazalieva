@@ -92,9 +92,16 @@
   text-decoration: none;
   font-weight: 100;
   font-size: 1.5rem;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 
 .link:hover {
   color: var(--backing);
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    grid-template-columns: repeat(1, minmax(20rem, 49.5rem));
+    grid-template-rows: repeat(4, 1fr);
+  }
 }

@@ -21,4 +21,11 @@ code {
   --complementary-2: #87e6e6;
   --complementary-1: #33cccc;
   --backing: #ffb273;
+
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+      font-size: 14px;
+    }
 }

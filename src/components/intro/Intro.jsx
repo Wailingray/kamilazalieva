@@ -1,8 +1,13 @@
 import React from "react";
 import styles from "./intro.module.css";
 import kamilaImagePath from "../../images/kamila_intro.png";
+import kamilaMobilePath from "../../images/kamila_intro_mobile.png";
+import useMediaQuery from "../../utils/useMediaQuery";
 
 export const Intro = () => {
+
+  const isMobile = useMediaQuery("(max-width: 480px)")
+
   return (
     <>
       <section className={styles.container}>
@@ -29,7 +34,7 @@ export const Intro = () => {
         <div className={styles.photoSection}>
           <div className={styles.photoBackground}></div>
           <img
-            src={kamilaImagePath}
+            src={isMobile ? kamilaMobilePath : kamilaImagePath}
             alt="Фото Камилы"
             className={styles.photo}
           />
