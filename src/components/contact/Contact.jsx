@@ -6,9 +6,10 @@ import instaPath from "../../images/icons/insta.svg";
 import donePath from "../../images/icons/done.svg";
 import errorPath from "../../images/icons/error.svg";
 import vkPath from "../../images/icons/vk.svg";
+import facebookPath from "../../images/icons/facebook.svg";
 import youTubePath from "../../images/icons/youtube.svg";
 import emailjs from "@emailjs/browser";
-import { fieldSchema, validateInput } from "../../utils/utils";
+import { emailSchema, fieldSchema, validateInput } from "../../utils/utils";
 
 export const Contact = () => {
   const formRef = useRef();
@@ -48,14 +49,37 @@ export const Contact = () => {
   const changeNameField = (e) => {
     setName(e.target.value);
     validateInput(fieldSchema, setNameError, name);
-    console.log(nameError)
   };
 
   const changeSubjectField = (e) => {
     setSubject(e.target.value);
-    validateInput(fieldSchema, setNameError, name);
-    console.log(nameError)
+    validateInput(fieldSchema, setSubjectError, subject);
   };
+
+  const changeEmailField = (e) => {
+    setEmail(e.target.value);
+    validateInput(emailSchema, setEmailError, email);
+  };
+
+  const changeMessageField = (e) => {
+    setMessage(e.target.value);
+    validateInput(fieldSchema, setMessageError, message);
+  };
+
+  const errorStyle = {
+    border: "1px solid red",
+    boxShadow: "0 0 10px 5px red",
+  };
+
+  const style = {
+    color: "#000000",
+    ":hover": {
+      color: "#ffffff",
+    },
+  };
+
+  const anyError = nameError || emailError || subjectError || messageError;
+  const noValue = !name || !email || !message || !subject;
 
   return (
     <section className={styles.container}>
@@ -114,6 +138,17 @@ export const Contact = () => {
                     alt="youTube"
                   />
                 </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100017070975421"
+                  className={styles.link}
+                  target="_blank"
+                >
+                  <img
+                    className={styles.itemImage}
+                    src={facebookPath}
+                    alt="youTube"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -125,7 +160,7 @@ export const Contact = () => {
             onSubmit={(e) => handleSubmit(e)}
           >
             <input
-              style={nameError ? {borderBottom: '1px solid red'} : null}
+              style={nameError ? errorStyle : null}
               className={styles.input}
               type="text"
               placeholder="Имя"
@@ -134,29 +169,46 @@ export const Contact = () => {
               onChange={(e) => changeNameField(e)}
             />
             <input
+              style={subjectError ? errorStyle : null}
               className={styles.input}
               type="text"
               placeholder="Ваш вопрос"
               name="subject"
-              onChange={(e) => setSubject(e.target.value)}
+              value={subject}
+              onChange={(e) => changeSubjectField(e)}
             />
             <input
+              style={emailError ? errorStyle : null}
               className={styles.input}
               type="text"
               placeholder="Email"
               name="email"
-              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              onChange={(e) => changeEmailField(e)}
             />
             <textarea
+              style={messageError ? errorStyle : null}
               className={styles.textarea}
               name=""
               placeholder="Сообщение"
               name="message"
               cols="30"
               rows="5"
+              value={message}
+              onChange={(e) => changeMessageField(e)}
             ></textarea>
             <div className={styles.submitContainer}>
-              <button disabled={done ? true : false} className={styles.button}>
+              <button
+                disabled={done || anyError || noValue ? true : false}
+                className={styles.button}
+                style={
+                  done || anyError || noValue
+                    ? {
+                        opacity: "0.2",
+                      }
+                    : null
+                }
+              >
                 Отправить!
               </button>
               {done && (

@@ -40,14 +40,17 @@
 }
 
 .title {
+  font-size: 3rem;
   font-weight: 400;
 }
 
 .subtitle {
+  font-size: 2rem;
   margin: 1rem 0;
 }
 
 .description {
+  font-size: 2rem;
   font-weight: 300;
 }
 
