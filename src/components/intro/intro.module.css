@@ -4,7 +4,7 @@
 }
 
 .greetingsWrapper {
-  padding: 3rem;
+  padding-left: 3rem;
   height: 50%;
   display: flex;
   flex-direction: column;
@@ -154,5 +154,93 @@
       2% 35%,
       39% 35%
     );
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+
+  }
+
+  .greetingsWrapper {
+
+  }
+
+  .titleItem {
+    font-size: 2rem;
+
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .hello {
+    font-size: 2rem;
+  }
+
+  .description {
+
+  }
+
+  .greetingsSection {
+    flex: 1;
+  }
+
+  .photoSection {
+    flex: 2;
+  }
+
+  .photo {
+    height: 90%;
+  }
+
+  .photoBackground {
+
+  }
+}
+
+
+@media screen and (max-width: 1440px) {
+  .container {
+
+  }
+
+  .greetingsWrapper {
+    padding-left: 2rem;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .titleItem {
+    font-size: 2rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .hello {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .greetingsSection {
+
+  }
+
+  .photoSection {
+
+  }
+
+  .photo {
+    height: 90%;
+  }
+
+  .photoBackground {
+
   }
 }

@@ -15,8 +15,7 @@ export const About = () => {
       <div className={styles.descriptionContainer}>
         <h1 className={styles.title}>Обо мне</h1>
         <p className={styles.subtitle}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aut ab
-          dolores quis at consectetur nam voluptas
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
         <p className={styles.description}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit,

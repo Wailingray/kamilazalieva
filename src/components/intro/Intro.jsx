@@ -5,8 +5,7 @@ import kamilaMobilePath from "../../images/kamila_intro_mobile.png";
 import useMediaQuery from "../../utils/useMediaQuery";
 
 export const Intro = () => {
-
-  const isMobile = useMediaQuery("(max-width: 480px)")
+  const isMobile = useMediaQuery("(max-width: 480px)");
 
   return (
     <>
@@ -26,18 +25,19 @@ export const Intro = () => {
             </div>
             <p className={styles.description}>
               Я очень сильно люблю музыку, когда я пою на сцене все мои проблемы
-              уходят на второй план и я не замечаю как проходит время. Я хочу
-              передать это чувство как можно большему числу своих учеников
+              уходят на второй план и я не замечаю как проходит время.
             </p>
           </div>
         </div>
         <div className={styles.photoSection}>
           <div className={styles.photoBackground}></div>
-          <img
-            src={isMobile ? kamilaMobilePath : kamilaImagePath}
-            alt="Фото Камилы"
-            className={styles.photo}
-          />
+          <div className={styles.photoContainer}>
+            <img
+              src={isMobile ? kamilaMobilePath : kamilaImagePath}
+              alt="Фото Камилы"
+              className={styles.photo}
+            />
+          </div>
         </div>
       </section>
     </>
