@@ -5,7 +5,7 @@ import kamilaMobilePath from "../../images/kamila_intro_mobile.png";
 import useMediaQuery from "../../utils/useMediaQuery";
 
 export const Intro = () => {
-  const isMobile = useMediaQuery("(max-width: 767px)");
+  const isMobile = useMediaQuery("(max-width: 480px)");
 
   return (
     <>
