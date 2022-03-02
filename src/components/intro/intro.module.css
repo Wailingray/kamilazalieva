@@ -5,7 +5,6 @@
 
 .greetingsWrapper {
   padding-left: 3rem;
-  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,10 +54,12 @@
 }
 
 .photo {
-  position: absolute;
+  max-height: 100%;
+  max-width: 100%;
+
   bottom: 0;
   right: 0;
-  height: 100%;
+
   object-fit: cover;
 }
 
@@ -97,13 +98,100 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 1440px) {
+  .photo {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+  }
+
+  .greetingsWrapper {
+    height: auto;
+    gap: 1rem;
+  }
+
+  .titleItem {
+  }
+
+  .name {
+  }
+
+  .hello {
+  }
+
+  .description {
+  }
+
+  .greetingsSection {
+  }
+
+  .photoSection {
+    flex: 1;
+  }
+
+  .photo {
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .photoBackground {
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+  }
+
+  .greetingsWrapper {
+  }
+
+  .titleItem {
+    font-size: 2rem;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .hello {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
+
+  .greetingsSection {
+    flex: 1;
+  }
+
+  .photoSection {
+    flex: 2;
+  }
+
+  .photo {
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .photoBackground {
+  }
+}
+
+@media screen and (max-width: 767px) {
   .container {
     flex-direction: column;
   }
 
   .greetingsWrapper {
-    padding: 0;
+    padding-left: 0;
     padding-top: 5%;
     text-align: center;
     justify-content: flex-start;
@@ -133,6 +221,8 @@
   }
 
   .photoSection {
+    display: flex;
+    align-items: flex-end;
     flex: 2;
   }
 
@@ -154,93 +244,5 @@
       2% 35%,
       39% 35%
     );
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .container {
-
-  }
-
-  .greetingsWrapper {
-
-  }
-
-  .titleItem {
-    font-size: 2rem;
-
-  }
-
-  .name {
-    font-size: 3rem;
-  }
-
-  .hello {
-    font-size: 2rem;
-  }
-
-  .description {
-
-  }
-
-  .greetingsSection {
-    flex: 1;
-  }
-
-  .photoSection {
-    flex: 2;
-  }
-
-  .photo {
-    height: 90%;
-  }
-
-  .photoBackground {
-
-  }
-}
-
-
-@media screen and (max-width: 1440px) {
-  .container {
-
-  }
-
-  .greetingsWrapper {
-    padding-left: 2rem;
-    height: auto;
-    gap: 1rem;
-  }
-
-  .titleItem {
-    font-size: 2rem;
-  }
-
-  .name {
-    font-size: 2rem;
-  }
-
-  .hello {
-    font-size: 2rem;
-  }
-
-  .description {
-    font-size: 1rem;
-  }
-
-  .greetingsSection {
-
-  }
-
-  .photoSection {
-
-  }
-
-  .photo {
-    height: 90%;
-  }
-
-  .photoBackground {
-
   }
 }
