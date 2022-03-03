@@ -1,6 +1,6 @@
 .galleryItem {
-  min-width: 20rem;
-  min-height: 20rem;
+  width: 20rem;
+  height: 20rem;
   margin: 2rem 2rem;
   border-radius: 1rem;
   overflow: hidden;
@@ -40,4 +40,13 @@
   .galleryItem {
     margin: 1rem;
   }
+}
+
+.image {
+  overflow: hidden;
+  object-fit: contain;
+  min-width: 300px;
+  max-height: 80vh;
+  max-width: 80vw;
+  width: 100%
 }

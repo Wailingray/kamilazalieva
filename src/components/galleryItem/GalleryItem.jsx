@@ -32,7 +32,7 @@ export const GalleryItem = (props) => {
       >
         {isShown && (
           <Modal onClose={() => setIsShown(false)}>
-            <img src={props.src} alt="" />
+            <img className={styles.image} src={props.src} alt="" />
           </Modal>
         )}{" "}
       </AnimatePresence>

@@ -1,6 +1,7 @@
 import styles from "./gallery.module.css";
 
 import photoPath from "../../images/kamila_on_stage.jpg";
+import kamilaMobilePath from "../../images/kamila_intro_mobile.png";
 import React from "react";
 import { GalleryItem } from "../galleryItem/GalleryItem";
 import { motion } from "framer-motion";
@@ -15,7 +16,7 @@ export const Gallery = () => {
       src: photoPath,
     },
     {
-      src: photoPath,
+      src: kamilaMobilePath,
     },
     {
       src: photoPath,
