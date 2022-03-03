@@ -57,13 +57,11 @@
 }
 
 .label {
-  margin: 0 auto;
   margin-top: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   gap: 1rem;
-  width: 90%;
 }
 
 .label:first-of-type {
@@ -124,9 +122,10 @@
     font-size: 1.5rem;
   }
 
+
+
   .description {
     margin: 0 auto;
-    width: 90%;
     font-size: 1.5rem;
   }
   .label {
@@ -153,9 +152,17 @@
     left: -5%;
   }
 
+  .labelDescription {
+    font-size: .7rem;
+  }
+
   .descriptionContainer {
     margin-top: 5%;
     text-align: center;
+  }
+
+  .labelTItle {
+    font-size: 1rem;
   }
 
   .title {

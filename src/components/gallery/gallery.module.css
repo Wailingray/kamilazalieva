@@ -8,7 +8,7 @@
 }
 
 .description {
-  width: 60%;
+  width: 100%;
 }
 
 .title {
@@ -27,20 +27,26 @@
 }
 
 .carousel {
+  min-height: 20rem;
   border-radius: 40% 0% 40% 0%;
   width: 70%;
   overflow: hidden;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  background: var(--backing);
 }
 
 .section {
-  margin: 2rem 0;
+  margin: 0rem 0;
   width: 100%;
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.section:nth-of-type(3) {
+  flex-direction: row-reverse;
 }
 
 .commentContainer {
@@ -53,7 +59,7 @@
 
 .commentTitle {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .comment {
@@ -64,8 +70,60 @@
 }
 
 .list {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
+}
+
+@media screen and (max-width: 1439px) {
+  .section {
+    flex-direction: column-reverse;
+  }
+
+  .gallery {
+    gap: 3rem;
+  }
+
+  .comment {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .section:nth-of-type(3) {
+    flex-direction: column-reverse;
+  }
+
+  .commentContainer {
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .carousel {
+    border-radius: 0;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .gallery {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .comment {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .carousel {
+    border-radius: 0;
+    width: 350px;
+  }
 }
