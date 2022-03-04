@@ -1,0 +1,61 @@
+.galleryItem {
+  width: 20rem;
+  height: 20rem;
+  margin: 2rem 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.iconContainer {
+  margin-left: 80%;
+  margin-bottom: -22%;
+  width: 4rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.icon {
+  width: 100%;
+  opacity: 0.8;
+  transition: 0.2s linear;
+}
+
+.icon:hover {
+  opacity: 1;
+  transform: translateY(-0.4em);
+}
+
+.image {
+  overflow: hidden;
+  object-fit: contain;
+  min-width: 300px;
+  max-height: 80vh;
+  max-width: 80vw;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 2560px) {
+  .galleryItem {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .galleryItem {
+    margin: 1rem;
+  }
+}
+

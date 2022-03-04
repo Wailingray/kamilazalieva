@@ -1,0 +1,151 @@
+.gallery {
+  min-height: 100vh;
+  padding: 3rem 3rem;
+  display: flex;
+  gap: 5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.description {
+  width: 100%;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.text {
+  margin: 1.5rem 0rem;
+}
+
+.innerCarousel {
+  display: flex;
+  background: var(--backing);
+  justify-content: space-between;
+}
+
+.carousel {
+  min-height: 20rem;
+  border-radius: 40% 0% 40% 0%;
+  width: 70%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background: var(--backing);
+}
+
+.section {
+  margin: 0rem 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.section:nth-of-type(3) {
+  flex-direction: row-reverse;
+}
+
+.commentContainer {
+  align-self: flex-start;
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.commentTitle {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.comment {
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-weight: 300;
+  text-align: left;
+}
+
+.list {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+@media screen and (min-width: 2560px) {
+  .gallery {
+    padding: 6rem;
+  }
+  .title {
+    font-size: 5rem;
+  }
+  .commentTitle {
+    font-size: 3rem;
+  }
+  .comment {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .section {
+    flex-direction: column-reverse;
+  }
+
+  .gallery {
+    padding: 3rem 0rem;
+    gap: 3rem;
+  }
+
+  .comment {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .section:nth-of-type(3) {
+    flex-direction: column-reverse;
+  }
+
+  .commentContainer {
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .carousel {
+    border-radius: 0;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .title {
+    margin: 0 auto;
+    max-width: 80%;
+    font-size: 2rem;
+  }
+  .commentContainer {
+    padding: 0 2rem;
+  }
+  .gallery {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .comment {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .carousel {
+    border-radius: 0;
+    width: 350px;
+  }
+}

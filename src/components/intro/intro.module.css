@@ -1,0 +1,282 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.greetingsWrapper {
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.name {
+  font-size: 8rem;
+  font-weight: 700;
+  text-shadow: 3px 3px 20px var(--complementary-1),
+    -2px 1px 30px var(--complementary-1);
+}
+
+.scrollButton {
+  width: 1.75rem;
+  height: 1.75rem;
+  position: absolute;
+  bottom: 2rem;
+}
+
+.hello {
+  display: none;
+  font-size: 3rem;
+  font-weight: 300;
+}
+.greetingsSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoSection {
+  flex: 1;
+  position: relative;
+}
+
+.title {
+  height: 4rem;
+  overflow: hidden;
+}
+
+.titleWrapper {
+  height: 100%;
+  animation: move 10s ease-in-out infinite alternate;
+}
+
+.description {
+  font-size: 2rem;
+}
+
+.photo {
+  max-height: 100%;
+  max-width: 100%;
+
+  bottom: 0;
+  right: 0;
+
+  object-fit: cover;
+}
+
+.photoBackground {
+  clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  background-color: var(--complementary-1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.titleItem {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--complementary-1);
+}
+
+@keyframes move {
+  25% {
+    transform: translateY(-4rem);
+  }
+  50% {
+    transform: translateY(-8rem);
+  }
+  75% {
+    transform: translateY(-12rem);
+  }
+  100% {
+    transform: translateY(-16rem);
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .greetingsWrapper {
+    padding-left: 6rem;
+  }
+  .name {
+    font-size: 16rem;
+  }
+  .photo {
+    position: absolute;
+  }
+  .title {
+    height: 8rem;
+  }
+  .titleItem {
+    height: 8rem;
+    font-size: 5rem;
+  }
+  .description {
+    font-size: 4rem;
+  }
+  @keyframes move {
+    25% {
+      transform: translateY(-8rem);
+    }
+    50% {
+      transform: translateY(-16rem);
+    }
+    75% {
+      transform: translateY(-24rem);
+    }
+    100% {
+      transform: translateY(-32rem);
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .name {
+    max-width: 70%;
+  }
+  .photo {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .greetingsWrapper {
+    height: auto;
+    gap: 1rem;
+  }
+
+  .titleItem {
+  }
+
+  .name {
+  }
+
+  .hello {
+  }
+
+  .description {
+  }
+
+  .greetingsSection {
+  }
+
+  .photo {
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .photoBackground {
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+  .container {
+    min-height: 100vh;
+  }
+
+  .greetingsWrapper {
+    gap: 2rem;
+  }
+
+  .titleItem {
+    font-size: 2rem;
+  }
+
+  .name {
+    max-width: 70%;
+    font-size: 3rem;
+  }
+
+  .hello {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .greetingsSection {
+    flex: 1;
+  }
+
+  .photo {
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .photoBackground {
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1023px) and (min-height: 600px) {
+  .container {
+    min-height: 550px;
+    max-height: 800px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .container {
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .greetingsWrapper {
+    padding: 2rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+  }
+
+  .titleItem {
+    font-size: 2rem;
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 4rem;
+  }
+
+  .hello {
+    font-size: 2rem;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .greetingsSection {
+    align-items: flex-start;
+    flex: 1;
+  }
+
+  .photoSection {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .photo {
+    height: min-content;
+    width: 100%;
+  }
+
+  .photoBackground {
+    clip-path: polygon(50% 0, 100% 50%, 100% 100%, 0% 100%, 0 50%, 50% 0);
+  }
+}
