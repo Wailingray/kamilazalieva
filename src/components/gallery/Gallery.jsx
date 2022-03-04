@@ -6,23 +6,17 @@ import React from "react";
 import { GalleryItem } from "../galleryItem/GalleryItem";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import useMediaQuery from "../../utils/useMediaQuery";
 
 export const Gallery = () => {
   const [width, setWidth] = useState(0);
+  const orient = useMediaQuery("(orientation: landscape)");
   const carousel = useRef();
+
 
   const images = [
     {
       src: photoPath,
-    },
-    {
-      src: kamilaMobilePath,
-    },
-    {
-      src: kamilaMobilePath,
-    },
-    {
-      src: kamilaMobilePath,
     },
     {
       src: kamilaMobilePath,
@@ -46,7 +40,7 @@ export const Gallery = () => {
 
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, [width]);
+  }, [width, orient, carousel]);
 
   return (
     <section className={styles.gallery}>
