@@ -1,5 +1,5 @@
 .about {
-  background-color: #f0f0f0;
+  background-color: var(--about);
   padding: 0 6rem;
   height: 100vh;
   display: flex;
@@ -20,7 +20,7 @@
 
 .card {
   width: 80%;
-  height: 60vh;
+  height: 80vh;
   border-radius: 3rem;
   z-index: 2;
 }
@@ -89,9 +89,33 @@
   font-size: 1rem;
 }
 
+@media screen and (min-width: 2560px) {
+  .title {
+    font-size: 5rem;
+  }
+  .subtitle {
+    font-size: 3rem;
+    margin: 2rem 0;
+  }
+  .description {
+    font-size: 3rem;
+  }
+  .labelImage {
+    width: 10rem;
+    height: 10rem;
+  }
+  .labelTitle {
+    font-size: 2rem;
+  }
+  .labelDescription {
+    font-size: 2rem;
+  }
+}
+
 @media screen and (min-width: 480px) and (max-width: 1439px) {
   .about {
-    padding: 6rem;
+    min-height: 100vh;
+    padding: 6rem 3rem;
     flex-direction: column;
     height: auto;
   }
@@ -102,6 +126,7 @@
   }
 
   .background {
+    max-height: 110%;
     width: 110%;
     height: 110%;
     top: -5%;
@@ -122,9 +147,8 @@
     font-size: 1.5rem;
   }
 
-
-
   .description {
+    max-width: 80%;
     margin: 0 auto;
     font-size: 1.5rem;
   }
@@ -135,7 +159,8 @@
 
 @media screen and (max-width: 479px) {
   .about {
-    padding: 3rem 3rem;
+    min-height: 100vh;
+    padding: 3rem 2rem;
     flex-direction: column;
     height: auto;
   }
@@ -153,7 +178,7 @@
   }
 
   .labelDescription {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 
   .descriptionContainer {
@@ -161,7 +186,7 @@
     text-align: center;
   }
 
-  .labelTItle {
+  .labelTitle {
     font-size: 1rem;
   }
 
@@ -171,6 +196,7 @@
   }
 
   .subtitle {
+    display: none;
     font-size: 1rem;
   }
 

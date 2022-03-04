@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./contact.module.css";
 import phonePath from "../../images/icons/phone.svg";
 import emailPath from "../../images/icons/email.svg";
@@ -43,7 +43,8 @@ export const Contact = () => {
           setError(true);
           console.log(error.text);
         }
-      );
+      )
+      .finally(window.focus());
   };
 
   const changeNameField = (e) => {

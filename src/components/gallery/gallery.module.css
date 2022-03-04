@@ -1,8 +1,10 @@
 .gallery {
+  min-height: 100vh;
   padding: 3rem 3rem;
   display: flex;
   gap: 5rem;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
@@ -77,6 +79,21 @@
   display: flex;
 }
 
+@media screen and (min-width: 2560px) {
+  .gallery {
+    padding: 6rem;
+  }
+  .title {
+    font-size: 5rem;
+  }
+  .commentTitle {
+    font-size: 3rem;
+  }
+  .comment {
+    font-size: 3rem;
+  }
+}
+
 @media screen and (max-width: 1439px) {
   .section {
     flex-direction: column-reverse;
@@ -108,9 +125,13 @@
 
 @media screen and (max-width: 1023px) {
   .title {
+    margin: 0 auto;
+    max-width: 80%;
     font-size: 2rem;
   }
-
+  .commentContainer {
+    padding: 0 2rem;
+  }
   .gallery {
     gap: 2rem;
   }

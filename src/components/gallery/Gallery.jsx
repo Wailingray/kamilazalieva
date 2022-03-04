@@ -19,6 +19,21 @@ export const Gallery = () => {
       src: kamilaMobilePath,
     },
     {
+      src: kamilaMobilePath,
+    },
+    {
+      src: kamilaMobilePath,
+    },
+    {
+      src: kamilaMobilePath,
+    },
+    {
+      src: kamilaMobilePath,
+    },
+    {
+      src: kamilaMobilePath,
+    },
+    {
       src: photoPath,
     },
     {
@@ -36,7 +51,7 @@ export const Gallery = () => {
   return (
     <section className={styles.gallery}>
       <div className={styles.description}>
-        <h1 className={styles.title}>Вдохновлять, любить и создавать новое</h1>
+        <h1 className={styles.title}>Вдохновлять, любить и творить</h1>
       </div>
       <div className={styles.section}>
         <motion.div ref={carousel} className={styles.carousel}>
@@ -87,7 +102,7 @@ export const Gallery = () => {
           </motion.div>
         </motion.div>
         <div className={styles.commentContainer}>
-          <h3 className={styles.commentTitle}>Концерты</h3>
+          <h3 className={styles.commentTitle}>Ученики</h3>
           <p className={styles.comment}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
             sed similique eum ad veritatis consequatur aliquam nulla officiis
@@ -116,7 +131,7 @@ export const Gallery = () => {
           </motion.div>
         </motion.div>
         <div className={styles.commentContainer}>
-          <h3 className={styles.commentTitle}>Концерты</h3>
+          <h3 className={styles.commentTitle}>Творчество</h3>
           <p className={styles.comment}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
             sed similique eum ad veritatis consequatur aliquam nulla officiis

@@ -11,7 +11,7 @@
 
 .title {
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 3rem;
   margin-bottom: 4rem;
   color: white;
@@ -99,7 +99,19 @@
 .link:hover {
   color: var(--backing);
 }
-
+@media screen and (min-width: 2560px) {
+  .title {
+    font-size: 5rem;
+  }
+  .link{
+    font-size: 3rem;
+  }
+  .section {
+    grid-template-columns: repeat(2, minmax(20rem, 80rem));
+    grid-template-rows: repeat(2, minmax(30rem, 50rem));
+    gap: 6rem;
+  }
+}
 @media screen and (max-width: 1439px) {
   .section {
     width: 100%;
@@ -120,7 +132,6 @@
 }
 
 @media screen and (max-width: 1023px) {
-
   .section {
     gap: 3rem;
   }
@@ -152,9 +163,7 @@
   }
 }
 
-
 @media screen and (max-width: 550px) {
-
   .shapeBottom svg {
     height: 15px;
   }

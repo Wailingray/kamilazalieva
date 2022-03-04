@@ -12,7 +12,7 @@ export const Intro = () => {
       <section className={styles.container}>
         <div className={styles.greetingsSection}>
           <div className={styles.greetingsWrapper}>
-            <h2 className={styles.hello}>Привет! Меня зовут</h2>
+            <h2 className={styles.hello}>Привет! Я</h2>
             <h1 className={styles.name}>Камила Залиева</h1>
             <div className={styles.title}>
               <div className={styles.titleWrapper}>
