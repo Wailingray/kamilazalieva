@@ -6,13 +6,12 @@ import React from "react";
 import { GalleryItem } from "../galleryItem/GalleryItem";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import useMediaQuery from "../../utils/useMediaQuery";
+import useScreenOrientation from "react-hook-screen-orientation";
 
 export const Gallery = () => {
   const [width, setWidth] = useState(0);
-  const orient = useMediaQuery("(orientation: landscape)");
   const carousel = useRef();
-
+  const screenOrientation = useScreenOrientation();
   const images = [
     {
       src: photoPath,
@@ -38,8 +37,12 @@ export const Gallery = () => {
   ];
 
   useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+
   }, [width]);
+
+  useEffect(() => {
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  }, [screenOrientation]);
 
   return (
     <section className={styles.gallery}>
@@ -52,9 +55,8 @@ export const Gallery = () => {
             drag="x"
             dragConstraints={{
               right: 0,
-              left: -500,
+              left: -width,
             }}
-
             className={styles.innerCarousel}
           >
             {images.map((el, idx) => {
@@ -66,7 +68,6 @@ export const Gallery = () => {
             })}
           </motion.div>
         </motion.div>
-
         <div className={styles.commentContainer}>
           <h3 className={styles.commentTitle}>Концерты</h3>
           <p className={styles.comment}>
