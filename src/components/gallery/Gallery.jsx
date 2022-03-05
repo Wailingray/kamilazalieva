@@ -13,7 +13,6 @@ export const Gallery = () => {
   const orient = useMediaQuery("(orientation: landscape)");
   const carousel = useRef();
 
-
   const images = [
     {
       src: photoPath,
@@ -40,7 +39,7 @@ export const Gallery = () => {
 
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, [width, orient, carousel]);
+  }, [width]);
 
   return (
     <section className={styles.gallery}>
@@ -53,8 +52,9 @@ export const Gallery = () => {
             drag="x"
             dragConstraints={{
               right: 0,
-              left: -width,
+              left: -500,
             }}
+
             className={styles.innerCarousel}
           >
             {images.map((el, idx) => {
@@ -66,6 +66,7 @@ export const Gallery = () => {
             })}
           </motion.div>
         </motion.div>
+
         <div className={styles.commentContainer}>
           <h3 className={styles.commentTitle}>Концерты</h3>
           <p className={styles.comment}>
