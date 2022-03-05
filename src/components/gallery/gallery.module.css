@@ -36,7 +36,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background: blue;
+  background: var(--backing);
 }
 
 .section {

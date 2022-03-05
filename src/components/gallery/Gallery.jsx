@@ -7,11 +7,14 @@ import { GalleryItem } from "../galleryItem/GalleryItem";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import useScreenOrientation from "react-hook-screen-orientation";
+import useDidMountEffect from "../../utils/useDidMountEffect";
 
 export const Gallery = () => {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
+  const item = useRef();
   const screenOrientation = useScreenOrientation();
+
   const images = [
     {
       src: photoPath,
@@ -36,12 +39,19 @@ export const Gallery = () => {
     },
   ];
 
-  useEffect(() => {
-
-  }, [width]);
+  let widthVar = 0;
 
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  }, []);
+
+  useDidMountEffect(() => {
+    widthVar =
+      screenOrientation === "portrait-primary" || "portrait-secondary"
+        ? carousel.current.scrollWidth - carousel.current.offsetHeight
+        : carousel.current.scrollWidth - carousel.current.offsetWidth;
+    setWidth(widthVar);
+    console.log(carousel)
   }, [screenOrientation]);
 
   return (
@@ -61,7 +71,7 @@ export const Gallery = () => {
           >
             {images.map((el, idx) => {
               return (
-                <li key={idx} className={styles.list}>
+                <li key={idx} ref={item} className={styles.list}>
                   <GalleryItem src={el.src} />
                 </li>
               );

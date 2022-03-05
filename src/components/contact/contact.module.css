@@ -154,6 +154,8 @@
 }
 
 .button {
+  box-sizing: border-box;
+  max-width: 60%;
   font-size: 1.5rem;
   height: 4rem;
   border-radius: 0.5rem;
@@ -278,6 +280,11 @@
     width: 1.5rem;
   }
 
+  .submitContainer {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
   .info {
     gap: 3rem;
     justify-content: space-between;
@@ -366,6 +373,7 @@
 
   .infoItem {
   }
+
 
   .itemText {
     font-size: 1.5rem;

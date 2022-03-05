@@ -41,10 +41,9 @@ export const Contact = () => {
         },
         (error) => {
           setError(true);
-          console.log(error.text);
+          console.log(error);
         }
-      )
-      .finally(window.focus());
+      );
   };
 
   const changeNameField = (e) => {
@@ -190,7 +189,6 @@ export const Contact = () => {
             <textarea
               style={messageError ? errorStyle : null}
               className={styles.textarea}
-              name=""
               placeholder="Сообщение"
               name="message"
               cols="30"
@@ -206,6 +204,7 @@ export const Contact = () => {
                   done || anyError || noValue
                     ? {
                         opacity: "0.2",
+                        transform: "translateY(0.1em)",
                       }
                     : null
                 }
