@@ -232,6 +232,13 @@ export const Contact = () => {
               )}
             </div>
           </form>
+          <a
+            href="https://vk.com/whailingray"
+            target="_blank"
+            className={styles.developerLink}
+          >
+            Сайт сделал Ваня Сергеев
+          </a>
         </div>
       </div>
     </section>

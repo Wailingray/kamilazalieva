@@ -183,6 +183,31 @@
   font-weight: 100;
 }
 
+.developerLink {
+  color: black;
+  position: absolute;
+  font-size: 1rem;
+  text-decoration: none;
+  bottom: 1rem;
+  right: 10%;
+  animation: shadow-pulse 10s ease-in-out infinite;
+  font-weight: 600;
+  text-shadow: -0.1em 0.1em 0em #00e6e6, -0.2em 0.2em 0em #01cccc,
+    -0.3em 0.3em 0em #00bdbd;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
 @media screen and (min-width: 2560px) {
   .contacts {
     gap: 2rem;
@@ -219,6 +244,9 @@
     border-radius: 1rem;
     font-size: 3rem;
   }
+  .developerLink {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 1439px) {
@@ -237,6 +265,10 @@
   .background {
     top: -13%;
     height: 113%;
+  }
+  .developerLink {
+    right: 8%;
+    font-size: 0.7rem;
   }
 }
 
@@ -304,6 +336,9 @@
 
   .itemText {
     font-size: 1.5rem;
+  }
+  .developerLink {
+    bottom: 0.5rem;
   }
 }
 
@@ -393,8 +428,11 @@
     width: 3rem;
   }
 
-
   .itemText {
     font-size: 1.5rem;
+  }
+  .developerLink {
+    font-size: 0.5rem;
+    right: 2rem;
   }
 }
