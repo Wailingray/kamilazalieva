@@ -2,7 +2,7 @@ import styles from "./gallery.module.css";
 
 import photoPath from "../../images/kamila_on_stage.jpg";
 import kamilaMobilePath from "../../images/kamila_intro_mobile.png";
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { GalleryItem } from "../galleryItem/GalleryItem";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -38,40 +38,15 @@ export const Gallery = () => {
     },
   ];
 
-  let widthVar = 0;
-
-  useDidMountEffect(() => {
-    if (screenOrientation === "portrait-primary" || "portrait-secondary") {
-      widthVar = carousel.current.scrollWidth - window.screen.width;
-    } else if (
-      screenOrientation === "landscape-primary" ||
-      "landscape-secondary"
-    ) {
-      widthVar = carousel.current.scrollWidth - window.screen.height;
-    }
-    console.log(
-      "portrait calcs ",
-      screenOrientation,
-      carousel.current.scrollWidth,
-      window.screen.width,
-      widthVar
-    );
-    console.log(
-      "landscape calcs ",
-      screenOrientation,
-      carousel.current.scrollWidth,
-      window.screen.height,
-      widthVar
-    );
+  useLayoutEffect(() => {
+    let widthVar1 = 0;
+    let widthVar2 = 1;
+    widthVar1 = carousel.current.scrollWidth - window.screen.width;
+    widthVar2 = carousel.current.scrollWidth - window.screen.height;
+    setWidth((prev) => (prev === widthVar1 ? widthVar2 : widthVar1));
   }, [screenOrientation]);
 
   useEffect(() => {
-    console.log(12321321)
-    setWidth(widthVar)
-  }, [width])
-
-  useEffect(() => {
-    console.log(132)
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, []);
 
