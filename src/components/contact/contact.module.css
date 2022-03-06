@@ -11,6 +11,7 @@
 }
 
 .wrapper {
+  height: 100%;
   width: 100%;
   padding: 3rem;
   display: flex;
@@ -308,6 +309,7 @@
 
 @media screen and (max-width: 550px) {
   .background {
+    display: none;
     width: 1rem;
     top: -3%;
     height: 103%;
@@ -339,6 +341,7 @@
   }
 
   .formContainer {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -347,15 +350,26 @@
   .form {
     gap: 0;
     margin: 0;
+    width: 100%;
     max-width: 100%;
   }
 
   .textarea {
     margin-top: 3rem;
+    font-size: 1rem;
+  }
+
+  .textarea::placeholder {
+    font-size: 1rem;
   }
 
   .input {
+    font-size: 1rem;
     width: 100%;
+  }
+
+  .input::placeholder {
+    font-size: 1rem;
   }
 
   .linkContainer {
@@ -364,14 +378,19 @@
     width: 100%;
   }
 
+  .button {
+    font-size: 1rem;
+    height: 3rem;
+  }
+
   .info {
     gap: 2rem;
     justify-content: space-between;
-    flex-wrap: wrap;
     flex-direction: row;
   }
 
-  .infoItem {
+  .itemImage {
+    width: 3rem;
   }
 
 

@@ -12,7 +12,6 @@ import useDidMountEffect from "../../utils/useDidMountEffect";
 export const Gallery = () => {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
-  const item = useRef();
   const screenOrientation = useScreenOrientation();
 
   const images = [
@@ -41,18 +40,45 @@ export const Gallery = () => {
 
   let widthVar = 0;
 
+  useDidMountEffect(() => {
+    if (screenOrientation === "portrait-primary" || "portrait-secondary") {
+      widthVar = carousel.current.scrollWidth - window.screen.width;
+    } else if (
+      screenOrientation === "landscape-primary" ||
+      "landscape-secondary"
+    ) {
+      widthVar = carousel.current.scrollWidth - window.screen.height;
+    }
+    console.log(
+      "portrait calcs ",
+      screenOrientation,
+      carousel.current.scrollWidth,
+      window.screen.width,
+      widthVar
+    );
+    console.log(
+      "landscape calcs ",
+      screenOrientation,
+      carousel.current.scrollWidth,
+      window.screen.height,
+      widthVar
+    );
+  }, [screenOrientation]);
+
   useEffect(() => {
+    console.log(12321321)
+    setWidth(widthVar)
+  }, [width])
+
+  useEffect(() => {
+    console.log(132)
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, []);
 
-  useDidMountEffect(() => {
-    widthVar =
-      screenOrientation === "portrait-primary" || "portrait-secondary"
-        ? carousel.current.scrollWidth - carousel.current.offsetHeight
-        : carousel.current.scrollWidth - carousel.current.offsetWidth;
-    setWidth(widthVar);
-    console.log(carousel)
-  }, [screenOrientation]);
+  const constraints = {
+    right: 0,
+    left: -width,
+  };
 
   return (
     <section className={styles.gallery}>
@@ -63,15 +89,12 @@ export const Gallery = () => {
         <motion.div ref={carousel} className={styles.carousel}>
           <motion.div
             drag="x"
-            dragConstraints={{
-              right: 0,
-              left: -width,
-            }}
+            dragConstraints={constraints}
             className={styles.innerCarousel}
           >
             {images.map((el, idx) => {
               return (
-                <li key={idx} ref={item} className={styles.list}>
+                <li key={idx} className={styles.list}>
                   <GalleryItem src={el.src} />
                 </li>
               );

@@ -146,6 +146,6 @@
 @media screen and (max-width: 350px) {
   .carousel {
     border-radius: 0;
-    width: 350px;
+    width: 100%;
   }
 }

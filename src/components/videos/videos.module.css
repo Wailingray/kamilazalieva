@@ -1,5 +1,5 @@
 .container {
-  min-height: 100%;
+  overflow: hidden;
   box-sizing: border-box;
   padding: 3rem;
   position: relative;
@@ -104,7 +104,7 @@
   .title {
     font-size: 5rem;
   }
-  .link{
+  .link {
     font-size: 3rem;
   }
   .section {
@@ -114,6 +114,9 @@
   }
 }
 @media screen and (max-width: 1439px) {
+  .container {
+  }
+
   .section {
     width: 100%;
     gap: 2rem;
@@ -134,6 +137,7 @@
 
 @media screen and (max-width: 1023px) {
   .section {
+    box-sizing: border-box;
     gap: 2rem;
   }
 
@@ -146,10 +150,11 @@
   }
 
   .container {
-    height: auto;
+    height: min-content;
   }
 
   .video {
+    box-sizing: border-box;
     padding: 1rem;
   }
 
@@ -173,17 +178,13 @@
     height: 15px;
   }
 
-  .container {
-    height: auto;
-  }
-
   .title {
     margin-bottom: 2rem;
   }
 
   .section {
     gap: 2rem;
-    grid-template-columns: repeat(1, minmax(20rem, 49.5rem));
-    grid-template-rows: repeat(4, 15rem);
+    grid-template-columns: repeat(1, minmax(18rem, 49.5rem));
+    grid-template-rows: repeat(4, 13rem);
   }
 }
