@@ -7,7 +7,6 @@ import { GalleryItem } from "../galleryItem/GalleryItem";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import useScreenOrientation from "react-hook-screen-orientation";
-import useDidMountEffect from "../../utils/useDidMountEffect";
 
 export const Gallery = () => {
   const [width, setWidth] = useState(0);

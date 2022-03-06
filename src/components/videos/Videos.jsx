@@ -39,13 +39,13 @@ export const Videos = () => {
           <YouTube videoId="EHI6YoEMu_I" opts={opts} />
         </div>
         <div className={styles.video}>
-          <YouTube videoId="EHI6YoEMu_I" opts={opts} />
+          <YouTube videoId="kCRbJaGH1z4" opts={opts} />
         </div>
         <div className={styles.video}>
-          <YouTube videoId="EHI6YoEMu_I" opts={opts} />
+          <YouTube videoId="z8R8SO4jbxU" opts={opts} />
         </div>
         <div className={styles.video}>
-          <YouTube videoId="EHI6YoEMu_I" opts={opts} />
+          <YouTube videoId="myVKR5T_kFg" opts={opts} />
         </div>
       </div>
       <a
