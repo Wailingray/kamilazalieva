@@ -18,6 +18,7 @@ import useScreenOrientation from "react-hook-screen-orientation";
 export const Gallery = () => {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
+  const screenOrientation = useScreenOrientation();
 
   const images = [
     {
@@ -42,6 +43,14 @@ export const Gallery = () => {
       src: photo7,
     },
   ];
+
+  useLayoutEffect(() => {
+    let widthVar1 = 0;
+    let widthVar2 = 1;
+    widthVar1 = carousel.current.scrollWidth - window.innerWidth;
+    widthVar2 = carousel.current.scrollWidth - window.innerHeight;
+    setWidth((prev) => (prev === widthVar1 ? widthVar2 : widthVar1));
+  }, [screenOrientation]);
 
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
