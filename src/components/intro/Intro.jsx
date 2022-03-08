@@ -2,7 +2,8 @@ import React from "react";
 import styles from "./intro.module.css";
 import kamilaImagePath from "../../images/kamila_intro.png";
 import kamilaMobilePath from "../../images/kamila_intro_mobile.png";
-import useMediaQuery from "../../utils/useMediaQuery";
+import { useMediaQuery } from "nc-one-react-helpers";
+
 
 export const Intro = () => {
   const isMobile = useMediaQuery("(max-width: 479px)");
