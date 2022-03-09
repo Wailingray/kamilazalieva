@@ -9,10 +9,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 3rem;
 }
 
 .name {
+  margin-bottom: 3rem;
   font-size: 8rem;
   font-weight: 700;
   text-shadow: 3px 3px 20px var(--complementary-1),
@@ -44,6 +44,7 @@
 }
 
 .title {
+  margin-bottom: 3rem;
   height: 4rem;
   overflow: hidden;
 }
@@ -102,12 +103,12 @@
   }
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2460px) {
   .greetingsWrapper {
     padding-left: 6rem;
   }
   .name {
-    font-size: 16rem;
+    font-size: 14rem;
   }
   .photo {
     position: absolute;
@@ -120,7 +121,7 @@
     font-size: 5rem;
   }
   .description {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   @keyframes move {
     25% {
@@ -150,19 +151,22 @@
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   .greetingsWrapper {
     height: auto;
-    gap: 1rem;
   }
 
-  .titleItem {
+  .title {
+    margin-bottom: 2rem;
   }
 
   .name {
+    font-size: 6rem;
+    margin-bottom: 2rem;
   }
 
   .hello {
   }
 
   .description {
+    font-size: 1.5rem;
   }
 
   .greetingsSection {
@@ -179,22 +183,28 @@
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 1023px) {
+@media screen and (min-width: 750px) and (max-width: 1023px) {
   .container {
     min-height: 100vh;
   }
 
   .greetingsWrapper {
-    gap: 2rem;
   }
 
   .titleItem {
     font-size: 2rem;
+    height: 4rem;
   }
 
   .name {
+    margin-bottom: 1rem;
     max-width: 70%;
-    font-size: 3rem;
+    font-size: 5rem;
+  }
+
+  .title {
+    max-width: 70%;
+    margin-bottom: 1rem;
   }
 
   .hello {
@@ -202,7 +212,7 @@
   }
 
   .description {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .greetingsSection {
@@ -215,8 +225,44 @@
     bottom: 0;
     right: 0;
   }
+}
 
-  .photoBackground {
+@media screen and (min-width: 480px) and (max-width: 749px) {
+
+  .greetingsSection {
+    flex: 0.5;
+  }
+
+
+  .greetingsWrapper {
+    padding-left: 2rem;
+  }
+
+  .name {
+    margin-bottom: 2rem;
+    max-width: 70%;
+    font-size: 3rem;
+  }
+
+  .photo {
+    position: absolute;
+  }
+
+  .title {
+    height: 4rem;
+    margin-bottom: 2rem;
+  }
+  .hello {
+    font-size: 2rem;
+  }
+
+  .titleItem {
+    font-size: 2rem;
+    height: 4rem;
+  }
+
+  .description {
+    font-size: 1rem;
   }
 }
 
@@ -241,7 +287,6 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
     height: 100%;
   }
 
@@ -252,6 +297,11 @@
 
   .name {
     font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    margin-bottom: 1rem;
   }
 
   .hello {
