@@ -2,7 +2,6 @@
   min-height: 100vh;
   padding: 3rem 3rem;
   display: flex;
-  gap: 5rem;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -29,6 +28,7 @@
 }
 
 .carousel {
+  margin-right: 2rem;
   min-height: 20rem;
   border-radius: 40% 0% 40% 0%;
   width: 70%;
@@ -40,15 +40,20 @@
 }
 
 .section {
-  margin: 0rem 0;
+  margin: 0;
+  margin-top: 5rem;
   width: 100%;
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
 }
 
 .section:nth-of-type(3) {
   flex-direction: row-reverse;
+}
+
+.section:nth-of-type(3) .carousel {
+  margin-right: 0rem;
+  margin-left: 2rem;
 }
 
 .commentContainer {
@@ -61,7 +66,8 @@
 
 .commentTitle {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .comment {
@@ -79,7 +85,7 @@
   display: flex;
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2460px) {
   .gallery {
     padding: 6rem;
   }
@@ -90,7 +96,14 @@
     font-size: 3rem;
   }
   .comment {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+  .carousel {
+    margin-right: 4rem;
+  }
+  .section:nth-of-type(3) .carousel {
+    margin-right: 0rem;
+    margin-left: 4rem;
   }
 }
 
@@ -101,7 +114,6 @@
 
   .gallery {
     padding: 3rem 0rem;
-    gap: 3rem;
   }
 
   .comment {
@@ -111,13 +123,24 @@
   .section:nth-of-type(3) {
     flex-direction: column-reverse;
   }
+  .section:nth-of-type(3) .carousel {
+    margin-right: 0rem;
+    margin-left: 0rem;
+  }
 
   .commentContainer {
     align-self: flex-start;
     width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .section {
+    margin-top: 3rem;
   }
 
   .carousel {
+    margin-left: 0;
+    margin-right: 0;
     border-radius: 0;
     width: 100vw;
   }
@@ -132,8 +155,11 @@
   .commentContainer {
     padding: 0 2rem;
   }
-  .gallery {
-    gap: 2rem;
+  .commentTitle {
+    font-size: 1.8rem;
+  }
+  .section {
+    margin-top: 2rem;
   }
 }
 

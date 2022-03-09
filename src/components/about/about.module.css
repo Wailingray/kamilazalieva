@@ -114,7 +114,7 @@
   fill: #ffffff;
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2460px) {
   .title {
     font-size: 5rem;
   }
