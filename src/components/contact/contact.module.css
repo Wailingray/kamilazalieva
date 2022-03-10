@@ -11,6 +11,7 @@
 }
 
 .wrapper {
+  height: 100%;
   width: 100%;
   padding: 3rem;
   display: flex;
@@ -20,11 +21,11 @@
 .contacts {
   max-width: 80%;
   margin-left: auto;
-  gap: 1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 36px;
 }
 
 .contactsWrapper {
@@ -38,28 +39,32 @@
 
 .formContainer {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .title {
   font-weight: 600;
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 4rem;
 }
 
 .infoItem {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  margin-bottom: 3rem;
 }
 
 .itemImage {
   width: 4rem;
+  margin-right: 1rem;
 }
 
 .itemText {
@@ -72,7 +77,6 @@
   justify-content: space-between;
   display: flex;
   align-items: flex-end;
-  gap: 1rem;
 }
 
 .link {
@@ -86,6 +90,7 @@
 
 .description {
   width: 75%;
+  margin-bottom: 1rem;
 }
 
 .heading {
@@ -99,13 +104,12 @@
 
 .form {
   max-width: 80%;
-  margin-right: auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
 .input {
+  margin-bottom: 1rem;
   font-size: 1.5rem;
   padding: 0.5rem 0 0 0.5rem;
   width: 70%;
@@ -149,11 +153,13 @@
 .submitContainer {
   margin-top: 2rem;
   display: flex;
-  gap: 2rem;
   align-items: center;
 }
 
 .button {
+  margin-right: 2rem;
+  box-sizing: border-box;
+  max-width: 60%;
   font-size: 1.5rem;
   height: 4rem;
   border-radius: 0.5rem;
@@ -180,12 +186,39 @@
   font-weight: 100;
 }
 
-@media screen and (min-width: 2560px) {
-  .contacts {
-    gap: 2rem;
+.developerLink {
+  margin-right: 20%;
+  text-align: center;
+  align-self: flex-end;
+  max-width: 150px;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  animation: shadow-pulse 10s ease-in-out infinite;
+  font-weight: 600;
+  text-shadow: -0.1em 0.1em 0em #00e6e6, -0.2em 0.2em 0em #01cccc,
+    -0.3em 0.3em 0em #00bdbd;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    opacity: 0.4;
   }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@media screen and (min-width: 2460px) {
   .title {
     font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+  .description {
+    margin-bottom: 2rem;
   }
   .heading {
     font-size: 3rem;
@@ -196,11 +229,9 @@
   .itemImage {
     width: 8rem;
   }
-  .form {
-    gap: 4rem;
-  }
   .input {
     font-size: 3rem;
+    margin-bottom: 4rem;
   }
   .textarea {
     font-size: 3rem;
@@ -216,15 +247,23 @@
     border-radius: 1rem;
     font-size: 3rem;
   }
+  .developerLink {
+    font-size: 2rem;
+    max-width: 300px;
+  }
+  .contacts {
+    margin-bottom: 70px;
+  }
 }
 
 @media screen and (max-width: 1439px) {
-  .info {
-    gap: 2rem;
+  .infoItem {
+    margin-bottom: 2rem;
   }
 
   .contacts {
     max-width: 90%;
+    margin-bottom: 25px;
   }
 
   .form {
@@ -235,32 +274,43 @@
     top: -13%;
     height: 113%;
   }
+  .developerLink {
+    font-size: 0.7rem;
+    max-width: 100px;
+    margin-right: 10%;
+  }
 }
 
 @media screen and (max-width: 1023px) {
   .wrapper {
-    gap: 2rem;
     flex-direction: column;
+    align-items: center;
   }
 
   .description {
     text-align: center;
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   .title {
     font-size: 2rem;
     align-self: center;
+    margin-bottom: 2rem;
   }
   .contacts {
-    gap: 2rem;
     margin: 0 auto;
     max-width: 90%;
   }
 
+  .formContainer {
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
   .form {
-    margin: 0 auto;
-    max-width: 90%;
+    width: 90%;
   }
 
   .input {
@@ -278,8 +328,15 @@
     width: 1.5rem;
   }
 
+  .button {
+    margin-right: 1rem;
+  }
+
+  .submitContainer {
+    justify-content: flex-start;
+  }
+
   .info {
-    gap: 3rem;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -295,12 +352,17 @@
   }
 
   .itemText {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
+  }
+  .developerLink {
+    bottom: 0.5rem;
+    margin-right: 5%;
   }
 }
 
 @media screen and (max-width: 550px) {
   .background {
+    display: none;
     width: 1rem;
     top: -3%;
     height: 103%;
@@ -308,7 +370,6 @@
 
   .wrapper {
     padding: 2rem 2rem;
-    gap: 2rem;
     flex-direction: column;
   }
 
@@ -318,12 +379,12 @@
   }
 
   .title {
+    margin-bottom: 1rem;
     font-size: 2rem;
     align-self: center;
   }
   .contacts {
     margin: 0;
-    gap: 1rem;
     max-width: 100%;
   }
 
@@ -332,23 +393,36 @@
   }
 
   .formContainer {
+    margin-top: 1rem;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .form {
-    gap: 0;
     margin: 0;
+    width: 100%;
     max-width: 100%;
   }
 
   .textarea {
     margin-top: 3rem;
+    font-size: 1rem;
+  }
+
+  .textarea::placeholder {
+    font-size: 1rem;
   }
 
   .input {
+    margin-bottom: 1rem;
+    font-size: 1rem;
     width: 100%;
+  }
+
+  .input::placeholder {
+    font-size: 1rem;
   }
 
   .linkContainer {
@@ -356,17 +430,31 @@
     width: 100%;
   }
 
+  .button {
+    font-size: 1rem;
+    height: 3rem;
+  }
+
   .info {
-    gap: 2rem;
     justify-content: space-between;
-    flex-wrap: wrap;
     flex-direction: row;
   }
 
   .infoItem {
+    margin-bottom: 1rem;
+  }
+
+  .itemImage {
+    width: 2.5rem;
+    margin-right: 0.5rem;
   }
 
   .itemText {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
+  }
+  .developerLink {
+    font-size: 0.5rem;
+    max-width: 80px;
+    margin-right: 0;
   }
 }

@@ -1,8 +1,10 @@
 .container {
+  overflow: hidden;
   box-sizing: border-box;
   padding: 3rem;
   position: relative;
   height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,20 +101,26 @@
 .link:hover {
   color: var(--backing);
 }
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2460px) {
+  .container {
+    height: 100vh;
+  }
   .title {
     font-size: 5rem;
   }
-  .link{
-    font-size: 3rem;
+  .link {
+    font-size: 2rem;
   }
   .section {
-    grid-template-columns: repeat(2, minmax(20rem, 80rem));
-    grid-template-rows: repeat(2, minmax(30rem, 50rem));
-    gap: 6rem;
+    grid-template-columns: repeat(2, minmax(20rem, 50rem));
+    grid-template-rows: repeat(2, minmax(20rem, 30rem));
+    gap: 4rem;
   }
 }
 @media screen and (max-width: 1439px) {
+  .container {
+  }
+
   .section {
     width: 100%;
     gap: 2rem;
@@ -133,7 +141,8 @@
 
 @media screen and (max-width: 1023px) {
   .section {
-    gap: 3rem;
+    box-sizing: border-box;
+    gap: 2rem;
   }
 
   .shapeBottom svg {
@@ -145,10 +154,11 @@
   }
 
   .container {
-    height: auto;
+    height: min-content;
   }
 
   .video {
+    box-sizing: border-box;
     padding: 1rem;
   }
 
@@ -172,17 +182,13 @@
     height: 15px;
   }
 
-  .container {
-    height: auto;
-  }
-
   .title {
     margin-bottom: 2rem;
   }
 
   .section {
     gap: 2rem;
-    grid-template-columns: repeat(1, minmax(20rem, 49.5rem));
-    grid-template-rows: repeat(4, 15rem);
+    grid-template-columns: repeat(1, minmax(18rem, 49.5rem));
+    grid-template-rows: repeat(4, 13rem);
   }
 }

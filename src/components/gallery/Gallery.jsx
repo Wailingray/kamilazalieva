@@ -1,8 +1,15 @@
 import styles from "./gallery.module.css";
 
-import photoPath from "../../images/kamila_on_stage.jpg";
+import photo1 from "../../images/gallery/concerts/photo1.jpg";
+import photo2 from "../../images/gallery/concerts/photo2.jpg";
+import photo3 from "../../images/gallery/concerts/photo3.jpg";
+import photo4 from "../../images/gallery/concerts/photo4.jpg";
+import photo5 from "../../images/gallery/concerts/photo5.jpg";
+import photo6 from "../../images/gallery/concerts/photo6.jpg";
+import photo7 from "../../images/gallery/concerts/photo7.jpg";
 import kamilaMobilePath from "../../images/kamila_intro_mobile.png";
-import React from "react";
+
+import React, { useLayoutEffect } from "react";
 import { GalleryItem } from "../galleryItem/GalleryItem";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -13,40 +20,37 @@ export const Gallery = () => {
 
   const images = [
     {
-      src: photoPath,
+      src: photo1,
     },
     {
-      src: kamilaMobilePath,
+      src: photo2,
     },
     {
-      src: kamilaMobilePath,
+      src: photo3,
     },
     {
-      src: kamilaMobilePath,
+      src: photo4,
     },
     {
-      src: kamilaMobilePath,
+      src: photo5,
     },
     {
-      src: kamilaMobilePath,
+      src: photo6,
     },
     {
-      src: kamilaMobilePath,
-    },
-    {
-      src: photoPath,
-    },
-    {
-      src: photoPath,
-    },
-    {
-      src: photoPath,
+      src: photo7,
     },
   ];
 
+
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, [width]);
+  }, []);
+
+  const constraints = {
+    right: 0,
+    left: -width,
+  };
 
   return (
     <section className={styles.gallery}>
@@ -57,10 +61,7 @@ export const Gallery = () => {
         <motion.div ref={carousel} className={styles.carousel}>
           <motion.div
             drag="x"
-            dragConstraints={{
-              right: 0,
-              left: -width,
-            }}
+            dragConstraints={constraints}
             className={styles.innerCarousel}
           >
             {images.map((el, idx) => {
