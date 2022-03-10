@@ -416,7 +416,7 @@
   }
 
   .input {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     font-size: 1rem;
     width: 100%;
   }
@@ -446,7 +446,7 @@
 
   .itemImage {
     width: 2.5rem;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
   }
 
   .itemText {
@@ -454,7 +454,7 @@
   }
   .developerLink {
     font-size: 0.5rem;
-    max-width: 70px;
+    max-width: 80px;
     margin-right: 0;
   }
 }
