@@ -101,9 +101,6 @@
   color: var(--backing);
 }
 @media screen and (min-width: 2460px) {
-  .container {
-    height: 100vh;
-  }
   .title {
     font-size: 5rem;
   }
