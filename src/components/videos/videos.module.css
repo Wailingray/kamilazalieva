@@ -3,7 +3,6 @@
   box-sizing: border-box;
   padding: 3rem;
   position: relative;
-  height: 100vh;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -117,6 +116,12 @@
     gap: 4rem;
   }
 }
+
+@media screen and (min-width: 1800px) {
+  .container {
+    height: 100vh;
+  }
+}
 @media screen and (max-width: 1439px) {
   .container {
   }
@@ -151,10 +156,6 @@
 
   .shapeTop svg {
     height: 30px;
-  }
-
-  .container {
-    height: min-content;
   }
 
   .video {
