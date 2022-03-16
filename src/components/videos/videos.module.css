@@ -116,6 +116,11 @@
     gap: 4rem;
   }
 }
+@media screen and (min-width: 1800px) {
+  .container {
+    height: 100vh;
+  }
+}
 @media screen and (max-width: 1439px) {
   .container {
   }
