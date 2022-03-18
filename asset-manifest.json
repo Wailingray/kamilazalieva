@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kamilazalieva/static/css/main.262c4508.css",
-    "main.js": "/kamilazalieva/static/js/main.3c2551ff.js",
+    "main.css": "/kamilazalieva/static/css/main.a6406522.css",
+    "main.js": "/kamilazalieva/static/js/main.8335ec22.js",
     "static/media/kamila_intro.png": "/kamilazalieva/static/media/kamila_intro.622daf56070c351e53df.png",
     "static/media/kamila_intro_mobile.png": "/kamilazalieva/static/media/kamila_intro_mobile.6780ffcc69fde9a1bed8.png",
     "static/media/photo3.jpg": "/kamilazalieva/static/media/photo3.cc49289d7ac57089129d.jpg",
@@ -19,16 +19,16 @@
     "static/media/insta.svg": "/kamilazalieva/static/media/insta.d6a6364c44de1059c98a7c203dd69471.svg",
     "static/media/vk.svg": "/kamilazalieva/static/media/vk.259b6f51b8a5c03bca95dfdf80f49000.svg",
     "static/media/youtube.svg": "/kamilazalieva/static/media/youtube.1a8b17313326c27034eee43f57a7c976.svg",
-    "static/media/facebook.svg": "/kamilazalieva/static/media/facebook.518813654feafe0f81eb117d526ca61a.svg",
-    "static/media/eye.svg": "/kamilazalieva/static/media/eye.f0ba8b6f6255399ece3e37653933f1cb.svg",
+    "static/media/facebook.svg": "/kamilazalieva/static/media/facebook.ca206bdaed56d2ff45a8b11a909489f2.svg",
+    "static/media/eye.svg": "/kamilazalieva/static/media/eye.29612de9a6d39f2a83b9d23999f97be8.svg",
     "static/media/close.svg": "/kamilazalieva/static/media/close.efeb16dadb2dc83929524d1bbb7f6dcd.svg",
-    "static/media/error.svg": "/kamilazalieva/static/media/error.1682cb1d927ab4c6715907b5e7ec14f8.svg",
-    "static/media/done.svg": "/kamilazalieva/static/media/done.a3cb7f145b3f57a93615ceda637111d1.svg",
-    "main.262c4508.css.map": "/kamilazalieva/static/css/main.262c4508.css.map",
-    "main.3c2551ff.js.map": "/kamilazalieva/static/js/main.3c2551ff.js.map"
+    "static/media/error.svg": "/kamilazalieva/static/media/error.acf7301b3a948311e75a1f9b0ef80b3d.svg",
+    "static/media/done.svg": "/kamilazalieva/static/media/done.7a663c5bc9dd553d8812872fbb8ff8b6.svg",
+    "main.a6406522.css.map": "/kamilazalieva/static/css/main.a6406522.css.map",
+    "main.8335ec22.js.map": "/kamilazalieva/static/js/main.8335ec22.js.map"
   },
   "entrypoints": [
-    "static/css/main.262c4508.css",
-    "static/js/main.3c2551ff.js"
+    "static/css/main.a6406522.css",
+    "static/js/main.8335ec22.js"
   ]
 }
