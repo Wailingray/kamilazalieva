@@ -29,10 +29,10 @@ export const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_3nt3bch",
-        "template_ofq5kjb",
+        "service_3pk7ltd",
+        "template_zk1kt0i",
         formRef.current,
-        "YmeBBGEbfJ2GLH6tc"
+        "BKJ8iXJGonUW-6snX"
       )
       .then(
         (result) => {
