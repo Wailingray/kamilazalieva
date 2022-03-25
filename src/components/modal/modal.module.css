@@ -26,10 +26,10 @@
   transition: 0.2s linear;
   width: 4rem;
   position: absolute;
-  top: -3.5rem;
-  right: -3.5rem;
   filter: invert(100%) sepia(11%) saturate(7422%) hue-rotate(182deg)
     brightness(124%) contrast(95%);
+  right: 0rem;
+  top: 0;
 }
 
 .close:hover {
@@ -41,8 +41,6 @@
     transition: 0.2s linear;
     width: 2rem;
     position: absolute;
-    top: -1.75rem;
-    right: -1.75rem;
     filter: invert(100%) sepia(11%) saturate(7422%) hue-rotate(182deg)
       brightness(124%) contrast(95%);
   }
