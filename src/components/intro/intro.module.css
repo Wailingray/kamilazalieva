@@ -15,8 +15,8 @@
   margin-bottom: 3rem;
   font-size: 8rem;
   font-weight: 700;
-  text-shadow: 3px 3px 20px var(--complementary-1),
-    -2px 1px 30px var(--complementary-1);
+
+    font-family: 'Poiret One', cursive;
 }
 
 .scrollButton {
@@ -67,7 +67,6 @@
 
   object-fit: cover;
 }
-
 .photoBackground {
   clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
   background-color: var(--complementary-1);

@@ -17,7 +17,7 @@ export const Intro = () => {
             <h1 className={styles.name}>Камила Залиева</h1>
             <div className={styles.title}>
               <div className={styles.titleWrapper}>
-                <div className={styles.titleItem}>Артистка</div>
+                <div className={styles.titleItem}>Певица</div>
                 <div className={styles.titleItem}>Музыкант</div>
                 <div className={styles.titleItem}>Педагог</div>
                 <div className={styles.titleItem}>Сонграйтер</div>
