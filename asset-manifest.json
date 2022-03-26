@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kamilazalieva/static/css/main.a6406522.css",
-    "main.js": "/kamilazalieva/static/js/main.8335ec22.js",
+    "main.css": "/kamilazalieva/static/css/main.3d59630d.css",
+    "main.js": "/kamilazalieva/static/js/main.f62b885a.js",
     "static/media/kamila_intro.png": "/kamilazalieva/static/media/kamila_intro.622daf56070c351e53df.png",
     "static/media/kamila_intro_mobile.png": "/kamilazalieva/static/media/kamila_intro_mobile.6780ffcc69fde9a1bed8.png",
     "static/media/photo3.jpg": "/kamilazalieva/static/media/photo3.cc49289d7ac57089129d.jpg",
@@ -24,11 +24,11 @@
     "static/media/close.svg": "/kamilazalieva/static/media/close.efeb16dadb2dc83929524d1bbb7f6dcd.svg",
     "static/media/error.svg": "/kamilazalieva/static/media/error.acf7301b3a948311e75a1f9b0ef80b3d.svg",
     "static/media/done.svg": "/kamilazalieva/static/media/done.7a663c5bc9dd553d8812872fbb8ff8b6.svg",
-    "main.a6406522.css.map": "/kamilazalieva/static/css/main.a6406522.css.map",
-    "main.8335ec22.js.map": "/kamilazalieva/static/js/main.8335ec22.js.map"
+    "main.3d59630d.css.map": "/kamilazalieva/static/css/main.3d59630d.css.map",
+    "main.f62b885a.js.map": "/kamilazalieva/static/js/main.f62b885a.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6406522.css",
-    "static/js/main.8335ec22.js"
+    "static/css/main.3d59630d.css",
+    "static/js/main.f62b885a.js"
   ]
 }
