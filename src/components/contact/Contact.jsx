@@ -110,15 +110,11 @@ export const Contact = () => {
               </div>
               <div className={styles.linkContainer}>
                 <a
-                  href="https://www.instagram.com/kamilazalieva/"
-                  className={styles.link}
+                  href="https://vk.com/idcamilelala"
                   target="_blank"
+                  className={styles.link}
                 >
-                  <img
-                    className={styles.itemImage}
-                    src={instaPath}
-                    alt="insta"
-                  />
+                  <img className={styles.itemImage} src={vkPath} alt="vk" />
                 </a>
                 <a
                   href="https://vk.com/idcamilelala"
@@ -128,27 +124,20 @@ export const Contact = () => {
                   <img className={styles.itemImage} src={vkPath} alt="vk" />
                 </a>
                 <a
-                  href="https://www.youtube.com/channel/UCmEhKMMTZCTu_cmSS2gKK2Q"
-                  className={styles.link}
+                  href="https://vk.com/idcamilelala"
                   target="_blank"
+                  className={styles.link}
                 >
-                  <img
-                    className={styles.itemImage}
-                    src={youTubePath}
-                    alt="youTube"
-                  />
+                  <img className={styles.itemImage} src={vkPath} alt="vk" />
                 </a>
                 <a
-                  href="https://www.facebook.com/profile.php?id=100017070975421"
-                  className={styles.link}
+                  href="https://vk.com/idcamilelala"
                   target="_blank"
+                  className={styles.link}
                 >
-                  <img
-                    className={styles.itemImage}
-                    src={facebookPath}
-                    alt="youTube"
-                  />
+                  <img className={styles.itemImage} src={vkPath} alt="vk" />
                 </a>
+                
               </div>
             </div>
           </div>
